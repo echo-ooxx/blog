@@ -1,0 +1,14 @@
+---
+layout: default
+title: lee lab
+---
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+    {% for post in site.posts %}
+    <li>
+        <p>{{ post.date | date_to_string }}</p>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
